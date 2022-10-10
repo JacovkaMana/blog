@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF"-8>
+    <meta http-equiv="X-UA-Compatible" content=""IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test site</title>
+    <link rel="stylesheet" href="{% static 'posts/css/styles.css' %}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" rel="stylesheet">
+</head>
+
+<body class="main-body">
+    
+    
+
+
+        <div id="default-header">
+                <div id="header-block">
+                    <a class="card-title" href="http://127.0.0.1:8000/posts/">
+                    Faneagain
+                    </a>
+                
+                    <a class="card-title" href="http://127.0.0.1:8000/posts/">
+                            &nbsp &nbsp log&else
+                    </a>
+                </div>
+                <div id="header-block-buttons">
+                    <button type="submit" id="header-button">
+                        <img src="{% static 'posts/images/menu-search.png' %}" width="30" height="30" alt="submit">  
+                    </button>
+                    <button type="submit" id="header-button">  
+                        <img src="{% static 'posts/images/menu-burger.png' %}" width="30" height="30" alt="submit">                      
+                    </button>
+                </div>
+        </div>
+
+    <div class = "layout">
+
+        <div class ="post-block">
+            <div class="vertical-holder">
+
+                <div class="content-card">
+                        <p class="entry-title">
+                            {{ post.post_title }}
+                        </p>
+                    
+                        <time class="entry-time" datetime="5/24/2022" title="5/24/2022">
+                            {{ post.post_date }}
+                        </time>
+
+                        <p class="entry-desc">
+                        &nbsp&nbsp {{ post.post_text }}
+                        </p>
+                </div>
+            </div>
+            
+            <img src="{% static 'posts/images/vert.jpg' %}" alt="Girl in a jacket">
+
+        </div>
+
+
+        <div class ="comment-block">
+            <form action="/posts/{{post.id}}/comment/" class="comment-form" method="post">
+                {% csrf_token %}
+                    <div class="comment-image" style="background-image: url({% static 'posts/images/menu-search.png' %});">
+                    </div>
+                        <input class="input-title" type="text" id="name" name="comment_author" />
+                        
+                    
+
+
+                        <textarea name="comment_text" cols="40" rows="10" class="input-desc"></textarea>
+
+                        <input type="submit" value="Comment" />
+                        <input type="hidden" name="next" value="{{ request.path }}">
+
+            </form>
+            
+        </div>
+
+        <div class ="comment-block">
+            <div class="vertical-holder">
+                {% for comment in comments_list %}
+                <div class="content-card">
+                        <p class="comment-title">
+                            {{ comment.comment_author }}
+                        </p>
+                    
+                        <p class="comment-text">
+                            {{ comment.comment_text }}
+                        </p>
+
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+            
+    </div>
+            
+
+    </div>
+
+        
+
+        
+
+    </div>
+
+    
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

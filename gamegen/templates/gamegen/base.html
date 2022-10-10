@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF"-8>
+    <meta http-equiv="X-UA-Compatible" content=""IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test site</title>
+    <link rel="stylesheet" href="{% static 'posts/css/styles.css' %}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" rel="stylesheet">
+</head>
+
+<body class="main-body">
+    
+    
+
+
+        <div id="default-header">
+                <div id="header-block">
+                    <p class="card-title">
+                    Faneagain
+                    </p>
+                    <p class="card-title">
+                        &nbsp &nbsp game&else
+                    </p>
+                </div>
+                <div id="header-block-buttons">
+                    <button type="submit" id="header-button">
+                        <img src="{% static 'posts/images/menu-search.png' %}" width="30" height="30" alt="submit">  
+                    </button>
+                    <button type="submit" id="header-button">  
+                        <img src="{% static 'posts/images/menu-burger.png' %}" width="30" height="30" alt="submit">                      
+                    </button>
+                </div>
+        </div>
+
+    <div class = "layout">
+
+
+        <div class ="block">
+            <div class="vertical-holder">
+
+                <div class="content-card">
+                        <a class="god-text" />
+                            {{ title.title_name }}
+                        </a>
+                    
+                        <a class="god-text"  />
+                            {{ title.title_alignment }}
+                        </a>
+
+                        <div class="colored-block" style="background-color: #{{ title.title_color }};">
+                        </div>
+
+                </div>
+            </div>
+
+            <div class="vertical-holder">
+
+                <div class="content-card">
+                        <a class="god-text" />
+                            {{ modifier.modificator_name }}
+                        </a>
+                    
+                        <a class="god-text"  />
+                            {{ modifier.modificator_stats }}
+                        </a>
+
+                        <div class="colored-block" style="background-color: #{{ modifier.modificator_color }};">
+                        </div>
+
+                </div>
+            </div>
+            
+
+        </div>
+
+
+        <div class ="block">
+            <div class="vertical-holder">
+
+                <div class="content-card">
+                        <a class="god-text" />
+                            {{ god.god_modificator}}
+                        </a>
+                    
+                        <a class="god-text"  />
+                            {{ god.god_title }}
+                        </a>
+
+                        <a class="god-text"  />
+                            {{ title.title_alignment }}
+                        </a>
+
+                        <div class="colored-block" style="background-color: #{{ god.god_color }};">
+                        </div>
+
+                </div>
+            </div>
+
+            
+
+        </div>
+
+       
+
+        
+
+    </div>
+
+    
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

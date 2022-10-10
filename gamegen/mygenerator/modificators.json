@@ -1,0 +1,84 @@
+
+{
+    "names": [
+
+        {
+            "name": "Angel",
+            "alignment": "Lawful Good",
+            "color": [247,247,240]
+        },
+        {
+            "name": "Demon",
+            "alignment": "Chaotic Evil",
+            "color": [163,13,13]
+        },
+        {
+            "name": "Starslinger",
+            "alignment": "Neutral Good",
+            "color": [125,138,126]
+        },
+        {
+            "name": "Beast",
+            "alignment": "Chaotic Neutral",
+            "color": [138,88,30]
+        },
+        {
+            "name": "Ghost",
+            "alignment": "Chaotic Neutral",
+            "color": [189,201,200]
+        },
+        {
+            "name": "Dragon",
+            "alignment": "Neutral Neutral",
+            "color": [222,221,213]
+        },
+        {
+            "name": "Cultist",
+            "alignment": "Chaotic Evil",
+            "color": [186,26,74]
+        }
+    ],
+
+    "modificators": [
+
+        {
+            "name": "Heroic",
+            "rarity": 3,
+            "color": [255,0,0],
+            "stats": [2, 0, 0, 2 ]
+        },
+        {
+            "name": "Heroic",
+            "rarity": 3,
+            "color": [0,55,255],
+            "stats": [0, 0, 2, 2]
+        },
+        {
+            "name": "Bizarre",
+            "rarity": 2,
+            "color": [135,129,161],
+            "stats": [0, 1, 1, 0]
+        },
+        {
+            "name": "Mad",
+            "rarity": 1,
+            "color": [0,255,26],
+            "stats": [0, 0, 0, 1]
+        },
+        {
+            "name": "Angelic",
+            "rarity": 1,
+            "color": [247,247,240],
+            "stats": [0, 0, 1, 0]
+        },
+        {
+            "name": "Legendary",
+            "rarity": 5,
+            "color": [245,216,71],
+            "stats": [2, 2, 2, 2]
+        }
+
+
+    ]
+    
+  }

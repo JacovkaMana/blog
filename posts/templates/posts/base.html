@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF"-8>
+    <meta http-equiv="X-UA-Compatible" content=""IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test site</title>
+    <link rel="stylesheet" href="{% static 'posts/css/styles.css' %}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" rel="stylesheet">
+</head>
+
+<body class="main-body">
+    
+    
+
+
+        <div id="default-header">
+                <div id="header-block">
+                    <p class="card-title">
+                    Faneagain
+                    </p>
+                    <p class="card-title">
+                        &nbsp &nbsp log&else
+                    </p>
+                </div>
+                <div id="header-block-buttons">
+                    <button type="submit" id="header-button">
+                        <img src="{% static 'posts/images/menu-search.png' %}" width="30" height="30" alt="submit">  
+                    </button>
+                    <button type="submit" id="header-button">  
+                        <img src="{% static 'posts/images/menu-burger.png' %}" width="30" height="30" alt="submit">                      
+                    </button>
+                </div>
+        </div>
+
+    <div class = "layout">
+
+
+        {% for post in latest_posts_list %}
+        <div class ="block">
+            <div class="vertical-holder">
+
+                <div class="content-card">
+                        <a class="entry-title" href="http://127.0.0.1:8000/posts/{{ post.id }}/">
+                            {{ post.post_title }}
+                        </a>
+                    
+                        <time class="entry-time" datetime="5/24/2022" title="5/24/2022">
+                            {{ post.post_date }}
+                        </time>
+
+                        <p class="entry-desc">
+                        &nbsp&nbsp {{ post.post_text }}
+                        </p>
+                </div>
+            </div>
+            
+            </div>
+
+        </div>
+        {% endfor %}
+
+       
+
+        
+
+    </div>
+
+    
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
